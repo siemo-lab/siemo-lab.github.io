@@ -16,9 +16,10 @@
 
         :root {
             --navy: #1F3A4C;
-            --teal: #5FA8AE;
-            --light-teal: #8FC3C8;
-            --forest: #2D5F5C;
+            --teal: #7EB1B4;
+            --light-teal: #7EB1B4;
+            --forest: #4A001F;
+            --burgundy: #990038;
             --white: #FFFFFF;
             --light-gray: #F8F8F8;
             --text-dark: #333333;
@@ -75,11 +76,11 @@
 
         .nav-links a:hover {
             opacity: 0.8;
-            border-bottom-color: var(--light-teal);
+            border-bottom-color: #7EB1B4;
         }
 
         .nav-links a.active {
-            border-bottom-color: var(--light-teal);
+            border-bottom-color: #7EB1B4;
         }
 
         /* Main Container */
@@ -104,7 +105,7 @@
         .hero {
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 3px solid var(--light-teal);
+            border-bottom: 3px solid #7EB1B4;
             margin-bottom: 4rem;
         }
 
@@ -157,7 +158,7 @@
         }
 
         .recruiting-box {
-            background-color: var(--light-teal);
+            background-color: #7EB1B4;
             padding: 2rem;
             border-radius: 8px;
             margin: 2rem 0;
@@ -185,13 +186,13 @@
         }
 
         .social-links a {
-            color: var(--teal);
+            color: #7EB1B4;
             text-decoration: none;
             transition: color 0.2s;
         }
 
         .social-links a:hover {
-            color: var(--forest);
+            color: #4A001F;
         }
 
         /* Members Page */
@@ -212,7 +213,7 @@
 
         .member-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(95, 168, 174, 0.15);
+            box-shadow: 0 8px 16px rgba(126, 177, 180, 0.15);
         }
 
         .member-photo {
@@ -221,7 +222,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 1.5rem;
-            border: 4px solid var(--teal);
+            border: 4px solid #7EB1B4;
         }
 
         .member-card h3 {
@@ -264,7 +265,7 @@
         }
 
         .section-divider {
-            border-top: 3px solid var(--light-teal);
+            border-top: 3px solid #7EB1B4;
             margin: 3rem 0;
             padding-top: 3rem;
         }
@@ -311,6 +312,112 @@
             color: var(--text-dark);
         }
 
+        /* Member Section Layout */
+        .member-section {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 2px solid #7EB1B4;
+        }
+
+        .member-section:last-child {
+            border-bottom: none;
+        }
+
+        .member-section-title {
+            font-size: 1.8rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid #7EB1B4;
+            display: inline-block;
+        }
+
+        .member-profile {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .member-profile-photo {
+            width: 100%;
+        }
+
+        .member-profile-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .member-profile-content h3 {
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .member-profile-content .pronouns {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .member-profile-content .contact {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .member-profile-content .contact a {
+            color: #7EB1B4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .member-profile-content .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .member-bio {
+            margin-top: 1.5rem;
+        }
+
+        .member-bio p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .member-bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .member-profile {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .member-profile-photo {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+            .member-section-title {
+                font-size: 1.4rem;
+            }
+
+            .member-profile-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+
         /* Research Page */
         .research-intro {
             background-color: var(--light-gray);
@@ -337,11 +444,11 @@
         }
 
         .question-box {
-            background-color: var(--light-teal);
+            background-color: #7EB1B4;
             color: var(--white);
             padding: 2rem;
             border-radius: 8px;
-            border-left: 6px solid var(--forest);
+            border-left: 6px solid #4A001F;
         }
 
         .question-box strong {
@@ -384,7 +491,7 @@
         .publication-item .status {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background-color: var(--light-teal);
+            background-color: #7EB1B4;
             color: var(--white);
             font-size: 0.85rem;
             border-radius: 4px;
@@ -412,7 +519,7 @@
         }
 
         .publication-item a {
-            color: var(--teal);
+            color: #7EB1B4;
             text-decoration: none;
             margin-right: 1.5rem;
             font-weight: 600;
@@ -436,7 +543,7 @@
             background-color: var(--light-gray);
             padding: 2rem;
             border-radius: 8px;
-            border-left: 5px solid var(--teal);
+            border-left: 5px solid #7EB1B4;
         }
 
         .news-item.text-only {
@@ -476,7 +583,7 @@
             padding: 2.5rem;
             border-radius: 8px;
             margin-bottom: 2.5rem;
-            border-left: 6px solid var(--teal);
+            border-left: 6px solid #7EB1B4;
         }
 
         .position-card h3 {
@@ -513,7 +620,7 @@
         .apply-button {
             display: inline-block;
             padding: 1rem 1.8rem;
-            background-color: var(--teal);
+            background-color: #7EB1B4;
             color: var(--white);
             text-decoration: none;
             border-radius: 4px;
@@ -523,7 +630,7 @@
         }
 
         .apply-button:hover {
-            background-color: var(--forest);
+            background-color: #4A001F;
         }
 
         .policy-section {
@@ -555,11 +662,11 @@
         }
 
         .value-card {
-            background: linear-gradient(135deg, var(--light-teal) 0%, var(--teal) 100%);
+            background: linear-gradient(135deg, #7EB1B4 0%, #7EB1B4 100%);
             color: var(--white);
             padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(95, 168, 174, 0.2);
+            box-shadow: 0 4px 12px rgba(126, 177, 180, 0.2);
         }
 
         .value-card h3 {
@@ -607,7 +714,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--light-teal);
+            color: #7EB1B4;
         }
 
         /* Responsive */
@@ -735,56 +842,78 @@
                 <p>Meet the researchers behind SIEMO</p>
             </div>
 
-            <div class="members-grid">
-                <div class="member-card">
-                    <img src="sahi_headshot_crop_smaller.jpg" alt="Razia Sahi" class="member-photo">
-                    <h3>Razia Sahi</h3>
-                    <div class="title">Principal Investigator</div>
-                    <a href="mailto:razia.sahi@rutgers.edu" class="email">razia.sahi@rutgers.edu</a>
+            <!-- Lab Director -->
+            <div class="member-section">
+                <h2 class="member-section-title">Lab Director</h2>
+                
+                <div class="member-profile">
+                    <div class="member-profile-photo">
+                        <img src="sahi_headshot_crop_smaller.jpg" alt="Razia Sahi">
+                    </div>
+                    <div class="member-profile-content">
+                        <h3>Razia Sahi, Ph.D.</h3>
+                        <p class="pronouns"><em>She/Her</em></p>
+                        <p class="contact"><strong>Email:</strong> <a href="mailto:razia.sahi@rutgers.edu">razia.sahi@rutgers.edu</a></p>
+                        
+                        <div class="member-bio">
+                            <p>Razia is an Assistant Professor in the Psychology Department at Rutgers University–Newark and the Director of the Social Interaction and Emotion Lab. Her lab works to understand how people influence each other's emotional states ("social emotion regulation") with a goal of underscoring the value of human connection and ways to leverage our interactions to improve psychological wellbeing.</p>
+                            
+                            <p>She completed her B.A. at New York University in Psychology and Philosophy, M.A. in Neurophilosophy at Georgia State University, Ph.D. in Psychology at University of California Los Angeles, and Postdoctoral Fellowship at Princeton University.</p>
+                            
+                            <p>She loves spending time outdoors, watching films, and cooking.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="member-card">
-                    <img src="strotsava-maryia.jpg" alt="Maryia Strotsava" class="member-photo">
-                    <h3>Maryia Strotsava</h3>
-                    <div class="title">PhD Student</div>
-                    <a href="mailto:maryia.strotsava@rutgers.edu" class="email">maryia.strotsava@rutgers.edu</a>
-                </div>
-
-                <div class="member-card">
-                    <img src="ana.JPG" alt="Ana Costa" class="member-photo">
-                    <h3>Ana Costa</h3>
-                    <div class="title">Lab Manager</div>
-                    <a href="mailto:ana.costa@rutgers.edu" class="email">ana.costa@rutgers.edu</a>
+            <!-- Lab Manager -->
+            <div class="member-section">
+                <h2 class="member-section-title">Lab Manager</h2>
+                
+                <div class="member-profile">
+                    <div class="member-profile-photo">
+                        <img src="ana.JPG" alt="Ana Costa">
+                    </div>
+                    <div class="member-profile-content">
+                        <h3>Ana Costa</h3>
+                        <p class="pronouns"><em>She/Her</em></p>
+                        <p class="contact"><strong>Email:</strong> <a href="mailto:ana.costa@rutgers.edu">ana.costa@rutgers.edu</a></p>
+                        
+                        <div class="member-bio">
+                            <p>Ana recently completed her B.A. with Honors in Psychology and English Literature at Stanford, where she was mentored by Kate Petrova and James Gross. She is originally from Aracaju, a coastal town in Brazil.</p>
+                            
+                            <p>Ana is excited to explore how narrative and linguistic processes shape emotion regulation, whether in everyday conversations between friends or within therapeutic settings. As SIEMO's founding lab manager, she is also looking forward to cultivating the community of the lab!</p>
+                            
+                            <p>Ana enjoys reading good novels, finding good Substack articles, and exploring NYC and NJ.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="section-divider"></div>
-
-            <div class="member-bios">
-                <div class="bio-section">
-                    <h3>Razia Sahi</h3>
-                    <p><em>Pronounced: RAH-zee-uh SAH-hee</em></p>
-                    <p>Razia is an Assistant Professor in the Psychology Department at Rutgers University–Newark and the Director of the Social Interaction and Emotion Lab. Her lab works to understand how people influence each other's emotional states ("social emotion regulation") with a goal of underscoring the value of human connection and ways to leverage our interactions to improve psychological wellbeing.</p>
-                    <p>She completed her B.A. at New York University in Psychology and Philosophy, M.A. in Neurophilosophy at Georgia State University, Ph.D. in Psychology at University of California Los Angeles, and Postdoctoral Fellowship at Princeton University.</p>
-                    <p>She loves spending time outdoors, watching films, and cooking.</p>
-                </div>
-
-                <div class="bio-section">
-                    <h3>Maryia Strotsava</h3>
-                    <p><em>Pronounced: MAR-yuh STROH-tsah-vah</em></p>
-                    <p>Originally from Belarus, Maryia completed high school in the Netherlands before moving to the US to earn a BS in Neuroscience and Sociology from Washington and Lee University. As an undergraduate, she studied the physiology of stress and conducted research on migration.</p>
-                    <p>After graduating, she worked at a cognitive neuroscience lab in the Kessler Foundation, focused on rehabilitation after traumatic brain injury. As an inaugural PhD student in the SIEMO lab, she is interested in prosocial coordination in crisis, especially how social emotion-regulation shapes collective resilience in the face of adversity.</p>
-                    <p>Outside of research, Maryia loves to travel, shoot film photography, and journal.</p>
-                </div>
-
-                <div class="bio-section">
-                    <h3>Ana Costa</h3>
-                    <p><em>Pronounced: AHN-ah COH-stah</em></p>
-                    <p>Ana recently completed her B.A. with Honors in Psychology and English Literature at Stanford, where she was mentored by Kate Petrova and James Gross. She is originally from Aracaju, a coastal town in Brazil.</p>
-                    <p>Ana is excited to explore how narrative and linguistic processes shape emotion regulation, whether in everyday conversations between friends or within therapeutic settings. As SIEMO's founding lab manager, she is also looking forward to cultivating the community of the lab!</p>
-                    <p>Ana enjoys reading good novels, finding good Substack articles, and exploring NYC and NJ.</p>
+            <!-- PhD Students -->
+            <div class="member-section">
+                <h2 class="member-section-title">PhD Students</h2>
+                
+                <div class="member-profile">
+                    <div class="member-profile-photo">
+                        <img src="strotsava-maryia.jpg" alt="Maryia Strotsava">
+                    </div>
+                    <div class="member-profile-content">
+                        <h3>Maryia Strotsava</h3>
+                        <p class="pronouns"><em>She/Her</em></p>
+                        <p class="contact"><strong>Email:</strong> <a href="mailto:maryia.strotsava@rutgers.edu">maryia.strotsava@rutgers.edu</a></p>
+                        
+                        <div class="member-bio">
+                            <p>Originally from Belarus, Maryia completed high school in the Netherlands before moving to the US to earn a BS in Neuroscience and Sociology from Washington and Lee University. As an undergraduate, she studied the physiology of stress and conducted research on migration.</p>
+                            
+                            <p>After graduating, she worked at a cognitive neuroscience lab in the Kessler Foundation, focused on rehabilitation after traumatic brain injury. As an inaugural PhD student in the SIEMO lab, she is interested in prosocial coordination in crisis, especially how social emotion-regulation shapes collective resilience in the face of adversity.</p>
+                            
+                            <p>Outside of research, Maryia loves to travel, shoot film photography, and journal.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
         <!-- RESEARCH PAGE -->
