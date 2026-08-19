@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIEMO Lab - Social Interaction and Emotion Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,17 +26,18 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
+            font-family: 'Lora', serif;
+            line-height: 1.8;
             color: var(--text-dark);
             background-color: var(--white);
+            font-size: 1.05rem;
         }
 
         /* Header & Navigation */
         header {
             background-color: var(--navy);
             color: var(--white);
-            padding: 1.5rem 2rem;
+            padding: 2rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -44,28 +48,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: 2.2rem;
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-links a {
             color: var(--white);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             transition: opacity 0.2s;
             border-bottom: 2px solid transparent;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
@@ -79,7 +84,7 @@
 
         /* Main Container */
         main {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -88,7 +93,7 @@
         .page {
             display: none;
             min-height: calc(100vh - 200px);
-            padding: 3rem 0;
+            padding: 4rem 0;
         }
 
         .page.active {
@@ -98,27 +103,29 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 2rem 0;
-            border-bottom: 2px solid var(--light-teal);
-            margin-bottom: 3rem;
+            padding: 3rem 0;
+            border-bottom: 3px solid var(--light-teal);
+            margin-bottom: 4rem;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
             color: var(--navy);
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--text-light);
+            font-weight: 500;
         }
 
         /* Home Page */
         .home-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: start;
         }
 
@@ -128,36 +135,44 @@
 
         .group-photo {
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             height: auto;
             border-radius: 12px;
             object-fit: cover;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .bio-section h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--navy);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
         .bio-section p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: var(--text-dark);
-            line-height: 1.8;
+            line-height: 1.9;
+            font-size: 1.1rem;
         }
 
         .recruiting-box {
             background-color: var(--light-teal);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
             color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        .recruiting-box strong {
+            font-weight: 700;
+            font-size: 1.2rem;
         }
 
         .recruiting-box a {
             color: var(--white);
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: underline;
         }
 
@@ -182,14 +197,14 @@
         /* Members Page */
         .members-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .member-card {
             background-color: var(--light-gray);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -201,42 +216,46 @@
         }
 
         .member-photo {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 1rem;
-            border: 3px solid var(--teal);
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--teal);
         }
 
         .member-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--navy);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .member-card .title {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-light);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
         }
 
         .member-card .email {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: var(--teal);
             text-decoration: none;
             word-break: break-all;
+            font-weight: 500;
         }
 
         .member-card .cv-link {
             display: inline-block;
-            margin-top: 0.8rem;
-            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
             background-color: var(--teal);
             color: var(--white);
             text-decoration: none;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
+            font-weight: 600;
             transition: background-color 0.2s;
         }
 
@@ -245,96 +264,116 @@
         }
 
         .section-divider {
-            border-top: 2px solid var(--light-teal);
-            margin: 2rem 0;
-            padding-top: 2rem;
+            border-top: 3px solid var(--light-teal);
+            margin: 3rem 0;
+            padding-top: 3rem;
         }
 
         .collaborators-section h3 {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             color: var(--navy);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
         }
 
         /* Research Page */
         .research-intro {
             background-color: var(--light-gray);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .research-intro h2 {
             color: var(--navy);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .research-intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .research-questions {
             display: grid;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .question-box {
             background-color: var(--light-teal);
             color: var(--white);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
-            border-left: 5px solid var(--forest);
+            border-left: 6px solid var(--forest);
         }
 
         .question-box strong {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .question-box p {
             font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         /* Publications Page */
         .publications-intro {
             background-color: var(--light-gray);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .publication-item {
-            border: 1px solid #e0e0e0;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            border: 2px solid #e0e0e0;
+            padding: 2rem;
+            margin-bottom: 2rem;
             border-radius: 8px;
             background-color: var(--white);
         }
 
         .publication-item h3 {
             color: var(--navy);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .publication-item .status {
             display: inline-block;
-            padding: 0.3rem 0.7rem;
+            padding: 0.5rem 1rem;
             background-color: var(--light-teal);
             color: var(--white);
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             border-radius: 4px;
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
+            font-weight: 600;
         }
 
         .publication-item .authors {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin: 0.5rem 0;
+            font-size: 1rem;
+            margin: 1rem 0;
+            font-weight: 500;
         }
 
         .publication-item .links {
-            margin-top: 0.8rem;
+            margin-top: 1.2rem;
         }
 
         .publication-item a {
             color: var(--teal);
             text-decoration: none;
-            margin-right: 1rem;
-            font-weight: 500;
+            margin-right: 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
         }
 
         .publication-item a:hover {
@@ -344,17 +383,17 @@
         /* News Page */
         .news-feed {
             display: grid;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .news-item {
             display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 1.5rem;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
             background-color: var(--light-gray);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
-            border-left: 4px solid var(--teal);
+            border-left: 5px solid var(--teal);
         }
 
         .news-item.text-only {
@@ -363,59 +402,80 @@
 
         .news-image {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
             border-radius: 6px;
         }
 
         .news-content h3 {
             color: var(--navy);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 700;
         }
 
         .news-date {
             color: var(--text-light);
-            font-size: 0.85rem;
-            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .news-content p {
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 1.05rem;
         }
 
         /* Join Us Page */
         .position-card {
             background-color: var(--light-gray);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--teal);
+            margin-bottom: 2.5rem;
+            border-left: 6px solid var(--teal);
         }
 
         .position-card h3 {
             color: var(--navy);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .position-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .position-card strong {
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .position-card ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .position-card li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
         }
 
         .apply-button {
             display: inline-block;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 1.8rem;
             background-color: var(--teal);
             color: var(--white);
             text-decoration: none;
             border-radius: 4px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.05rem;
             transition: background-color 0.2s;
         }
 
@@ -425,35 +485,49 @@
 
         .policy-section {
             background-color: var(--light-gray);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .policy-section h3 {
             color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .policy-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
             margin-bottom: 1rem;
         }
 
         /* Values Page */
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .value-card {
             background: linear-gradient(135deg, var(--light-teal) 0%, var(--teal) 100%);
             color: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(95, 168, 174, 0.2);
         }
 
         .value-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
         /* Footer */
@@ -461,21 +535,26 @@
             background-color: var(--navy);
             color: var(--white);
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 2.5rem;
+            margin-top: 5rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            font-size: 1.3rem;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
         }
 
         .footer-links a {
@@ -491,16 +570,21 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                gap: 1rem;
-                font-size: 0.85rem;
+                gap: 1.2rem;
+                font-size: 0.95rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
 
             .home-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .news-item {
@@ -508,34 +592,47 @@
             }
 
             .members-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 600px) {
             .nav-links {
                 flex-wrap: wrap;
-                gap: 0.8rem;
+                gap: 1rem;
+                font-size: 0.9rem;
             }
 
             .logo {
-                font-size: 1.3rem;
+                font-size: 1.6rem;
             }
 
             header {
-                padding: 1rem;
+                padding: 1.5rem 1rem;
             }
 
             main {
-                padding: 0 1rem;
+                padding: 0 1.2rem;
             }
 
             .page {
-                padding: 1.5rem 0;
+                padding: 2rem 0;
             }
 
             .hero h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
