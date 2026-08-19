@@ -51,12 +51,21 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+            gap: 2rem;
         }
 
         .logo {
             font-size: 2.2rem;
             font-weight: 700;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
         }
 
         .nav-links {
@@ -711,7 +720,32 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 1.5rem;
-            font-size: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.2s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: rgba(126, 177, 180, 0.3);
+            font-weight: 600;
+        }
+
+        .footer-links a img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-links a:hover {
+            background-color: #7EB1B4;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(126, 177, 180, 0.4);
         }
 
         .footer-content p a {
@@ -797,7 +831,10 @@
 <body>
     <header>
         <nav>
-            <div class="logo">SIEMO Lab</div>
+            <div class="logo">
+                <img src="logo_small_nolab_blue.png" alt="SIEMO Lab Logo">
+                <span>SIEMO Lab</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
                 <li><a href="#" data-page="members" class="nav-link">Members</a></li>
@@ -825,6 +862,7 @@
 
                 <div class="bio-section">
                     <h2>Welcome to SIEMO</h2>
+                    <img src="logo_name_black_blue.png" alt="SIEMO Lab Logo" style="max-width: 350px; width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px;">
                     <p>As social creatures, our relationships with other people have tremendous downstream impacts on health and well-being. This is in part because social interactions dramatically shape how we think and feel, influencing how we process and experience emotions through life's challenges.</p>
 
                     <p>Our research systematically unpacks the effects of social support on emotion and well-being across various modalities and contexts, targeting a process called "social emotion regulation." Through this work, we aim to promote emotional intelligence in how we understand ourselves, each other, and our connections with one another.</p>
@@ -1289,8 +1327,15 @@
                 <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu">nwk_psych_siemolab@psychology.rutgers.edu</a>
             </p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/company/siemo-lab/about/?viewAsMember=true" target="_blank">in</a>
-                <a href="https://bsky.app/profile/siemolab.bsky.social" target="_blank">☁️</a>
+                <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu" title="Email" class="email">
+                    <img src="Envelope--Streamline-Ultimate.png" alt="Email" style="width: 28px; height: 28px;">
+                </a>
+                <a href="https://www.linkedin.com/company/siemo-lab/about/?viewAsMember=true" target="_blank" title="LinkedIn" class="linkedin">
+                    <img src="LinkedIn--Streamline-Simple-Icons.png" alt="LinkedIn" style="width: 28px; height: 28px;">
+                </a>
+                <a href="https://bsky.app/profile/siemolab.bsky.social" target="_blank" title="Bluesky" class="bluesky">
+                    <img src="Bluesky--Streamline-Simple-Icons.png" alt="Bluesky" style="width: 28px; height: 28px;">
+                </a>
             </div>
         </div>
     </footer>
