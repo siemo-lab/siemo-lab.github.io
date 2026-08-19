@@ -685,13 +685,13 @@
         <nav>
             <div class="logo">SIEMO Lab</div>
             <ul class="nav-links">
-                <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
-                <li><a href="#" onclick="showPage('members')" class="nav-link">Members</a></li>
-                <li><a href="#" onclick="showPage('research')" class="nav-link">Research</a></li>
-                <li><a href="#" onclick="showPage('publications')" class="nav-link">Publications</a></li>
-                <li><a href="#" onclick="showPage('news')" class="nav-link">News</a></li>
-                <li><a href="#" onclick="showPage('join')" class="nav-link">Join Us</a></li>
-                <li><a href="#" onclick="showPage('values')" class="nav-link">Values</a></li>
+                <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+                <li><a href="#" data-page="members" class="nav-link">Members</a></li>
+                <li><a href="#" data-page="research" class="nav-link">Research</a></li>
+                <li><a href="#" data-page="publications" class="nav-link">Publications</a></li>
+                <li><a href="#" data-page="news" class="nav-link">News</a></li>
+                <li><a href="#" data-page="join" class="nav-link">Join Us</a></li>
+                <li><a href="#" data-page="values" class="nav-link">Values</a></li>
             </ul>
         </nav>
     </header>
@@ -717,7 +717,7 @@
 
                     <div class="recruiting-box">
                         <strong>We're Recruiting!</strong>
-                        <p style="margin-top: 0.8rem; margin-bottom: 0;">We're looking for passionate researchers to join our team. Learn more about current opportunities on our <a href="#" onclick="showPage('join'); return false;">Join Us</a> page.</p>
+                        <p style="margin-top: 0.8rem; margin-bottom: 0;">We're looking for passionate researchers to join our team. Learn more about current opportunities on our <a href="#" onclick="showPage('join'); return false;" style="color: var(--white); font-weight: 700; text-decoration: underline;">Join Us</a> page.</p>
                     </div>
 
                     <div class="social-links">
@@ -1068,7 +1068,7 @@
                     <div class="news-content">
                         <h3>Now Recruiting for Fall 2027!</h3>
                         <div class="news-date">August 2026</div>
-                        <p>We are currently seeking passionate researchers to join our team as graduate students, postbacs, and undergraduate research assistants. If you're interested in understanding how social connections shape emotion and wellbeing, we'd love to hear from you! Learn more on our <a href="#" onclick="showPage('join'); return false;" style="color: var(--teal); font-weight: 600;">Join Us</a> page.</p>
+                        <p>We are currently seeking passionate researchers to join our team as graduate students, postbacs, and undergraduate research assistants. If you're interested in understanding how social connections shape emotion and wellbeing, we'd love to hear from you! Learn more on our <a href="#" onclick="showPage('join'); return false;" style="color: var(--teal); font-weight: 600; text-decoration: underline;">Join Us</a> page.</p>
                     </div>
                 </div>
 
@@ -1217,21 +1217,30 @@
             });
 
             // Show selected page
-            document.getElementById(pageId).classList.add('active');
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
 
             // Add active to clicked nav link
-            event.target.classList.add('active');
+            const activeLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
 
             // Scroll to top
             window.scrollTo(0, 0);
+            
+            return false;
         }
 
-        // Prevent default link behavior
+        // Add click handlers to all nav links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const pageId = this.getAttribute('href').substring(1);
+                const pageId = this.getAttribute('data-page');
                 showPage(pageId);
+                return false;
             });
         });
     </script>
