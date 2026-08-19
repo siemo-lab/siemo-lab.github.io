@@ -366,6 +366,13 @@
             font-weight: 500;
         }
 
+        .member-profile-content .pronunciation {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
         .member-profile-content .contact {
             font-size: 1.05rem;
             margin-bottom: 1.5rem;
@@ -707,13 +714,13 @@
             font-size: 1.5rem;
         }
 
-        .footer-links a {
+        .footer-content p a {
             color: var(--white);
             text-decoration: none;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover {
+        .footer-content p a:hover {
             color: #7EB1B4;
         }
 
@@ -823,13 +830,7 @@
                     <p>Our research systematically unpacks the effects of social support on emotion and well-being across various modalities and contexts, targeting a process called "social emotion regulation." Through this work, we aim to promote emotional intelligence in how we understand ourselves, each other, and our connections with one another.</p>
 
                     <div class="recruiting-box">
-                        <strong>We're Recruiting!</strong>
-                        <p style="margin-top: 0.8rem; margin-bottom: 0;">We're looking for passionate researchers to join our team. Learn more about current opportunities on our <a href="#" onclick="showPage('join'); return false;" style="color: var(--white); font-weight: 700; text-decoration: underline;">Join Us</a> page.</p>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://linkedin.com" title="LinkedIn">in</a>
-                        <a href="https://bsky.app" title="Bluesky">☁️</a>
+                        <p style="margin: 0;">Dr. Sahi will be recruiting a graduate student for Fall 2027. See <a href="#" data-page="research" onclick="showPage('research'); return false;" style="color: var(--white); font-weight: 700; text-decoration: underline;">Research</a> to learn more about her current research directions.</p>
                     </div>
                 </div>
             </div>
@@ -852,6 +853,7 @@
                     </div>
                     <div class="member-profile-content">
                         <h3>Razia Sahi, Ph.D.</h3>
+                        <p class="pronunciation"><em>Pronounced: RAH-zee-uh SAH-hee</em></p>
                         <p class="pronouns"><em>She/Her</em></p>
                         <p class="contact"><strong>Email:</strong> <a href="mailto:razia.sahi@rutgers.edu">razia.sahi@rutgers.edu</a></p>
                         
@@ -876,6 +878,7 @@
                     </div>
                     <div class="member-profile-content">
                         <h3>Ana Costa</h3>
+                        <p class="pronunciation"><em>Pronounced: AHN-ah COH-stah</em></p>
                         <p class="pronouns"><em>She/Her</em></p>
                         <p class="contact"><strong>Email:</strong> <a href="mailto:ana.costa@rutgers.edu">ana.costa@rutgers.edu</a></p>
                         
@@ -900,6 +903,7 @@
                     </div>
                     <div class="member-profile-content">
                         <h3>Maryia Strotsava</h3>
+                        <p class="pronunciation"><em>Pronounced: MAR-yuh STROH-tsah-vah</em></p>
                         <p class="pronouns"><em>She/Her</em></p>
                         <p class="contact"><strong>Email:</strong> <a href="mailto:maryia.strotsava@rutgers.edu">maryia.strotsava@rutgers.edu</a></p>
                         
@@ -920,7 +924,6 @@
         <div id="research" class="page">
             <div class="hero">
                 <h1>Research Directions</h1>
-                <p>Understanding how social connections shape emotion and well-being</p>
             </div>
 
             <div class="research-intro">
@@ -1193,14 +1196,6 @@
                     </div>
                 </div>
 
-                <div class="news-item text-only">
-                    <div class="news-content">
-                        <h3>Now Recruiting for Fall 2027!</h3>
-                        <div class="news-date">August 2026</div>
-                        <p>We are currently seeking passionate researchers to join our team as graduate students, postbacs, and undergraduate research assistants. If you're interested in understanding how social connections shape emotion and wellbeing, we'd love to hear from you! Learn more on our <a href="#" onclick="showPage('join'); return false;" style="color: var(--teal); font-weight: 600; text-decoration: underline;">Join Us</a> page.</p>
-                    </div>
-                </div>
-
                 <!-- TEMPLATE: Add new news items here -->
                 <!-- Copy this block for new news items:
                 <div class="news-item text-only">
@@ -1228,55 +1223,21 @@
         <div id="join" class="page">
             <div class="hero">
                 <h1>Join SIEMO</h1>
-                <p>Opportunities to collaborate with our research team</p>
             </div>
 
             <div class="position-card">
                 <h3>Undergraduate Research Assistants</h3>
-                <p>We welcome motivated undergraduates to join our lab as research assistants. You'll gain hands-on experience in behavioral research, data collection, and analysis while contributing to studies examining emotion and social interaction.</p>
-                <strong>Qualifications:</strong>
-                <ul>
-                    <li>Strong interest in psychology, emotion, or social science research</li>
-                    <li>Ability to commit 8-10 hours per week</li>
-                    <li>Attention to detail and reliability</li>
-                </ul>
-                <a href="mailto:razia.sahi@rutgers.edu?subject=Undergraduate%20RA%20Position" class="apply-button">Inquire About Position</a>
+                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
             </div>
 
             <div class="position-card">
                 <h3>Postbaccalaureate Researchers</h3>
-                <p>For recent graduates seeking research experience before graduate school, postbac positions offer deeper engagement with ongoing projects. Postbacs contribute to data collection, analysis, and manuscript preparation.</p>
-                <strong>Qualifications:</strong>
-                <ul>
-                    <li>Bachelor's degree in psychology or related field</li>
-                    <li>Experience with or interest in learning statistics and coding</li>
-                    <li>Ability to commit to a 1-2 year position</li>
-                </ul>
-                <a href="mailto:razia.sahi@rutgers.edu?subject=Postbac%20Position" class="apply-button">Inquire About Position</a>
+                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
             </div>
 
             <div class="position-card">
                 <h3>Graduate Students</h3>
-                <p>We recruit doctoral students through the Rutgers Psychology PhD program. Our lab welcomes students interested in emotion, social cognition, clinical science, or computational methods applied to behavioral data.</p>
-                <strong>Qualifications:</strong>
-                <ul>
-                    <li>Admission to Rutgers Psychology PhD Program</li>
-                    <li>Research interests aligned with social emotion regulation</li>
-                    <li>Strong academic foundation in statistics and research methods</li>
-                </ul>
-                <p style="margin-top: 1rem;"><strong>Application window:</strong> Fall admission cycle (typically December deadline)</p>
-            </div>
-
-            <div class="policy-section">
-                <h3>Our Commitment to Candidates</h3>
-                <p>We believe in transparent and respectful recruitment. When you reach out to inquire about joining the lab, you can expect:</p>
-                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-                    <li>A prompt response within one week</li>
-                    <li>Clear information about current opportunities and timeline</li>
-                    <li>An honest discussion about lab culture and expectations</li>
-                    <li>For graduate students, guidance on the application process and timeline</li>
-                </ul>
-                <p style="margin-top: 1.5rem;">We welcome questions at any stage—don't hesitate to reach out!</p>
+                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
             </div>
         </div>
 
@@ -1284,38 +1245,37 @@
         <div id="values" class="page">
             <div class="hero">
                 <h1>Lab Values</h1>
-                <p>Principles guiding our research and community</p>
             </div>
 
             <div class="values-grid">
                 <div class="value-card">
-                    <h3>Rigorous Science</h3>
-                    <p>We are committed to conducting careful, thoughtful research that advances our understanding of human emotion and social connection. This means valuing replication, transparency, and continuous improvement of our methods.</p>
+                    <h3>Value One</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>Intellectual Generosity</h3>
-                    <p>We believe in sharing ideas openly, supporting colleagues, and building on the work of others. Our research is strengthened by collaboration, critical feedback, and the diverse perspectives of our team members.</p>
+                    <h3>Value Two</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>Emotional Insight</h3>
-                    <p>Understanding human emotion requires attending to both the science and the lived experience. We value curiosity about emotional life, empathy, and the wisdom that comes from attending closely to how people experience the world.</p>
+                    <h3>Value Three</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>Equity and Inclusion</h3>
-                    <p>We strive to build a lab community where all researchers feel valued and supported. We are committed to advancing research that benefits diverse populations and to fostering an inclusive environment for our team.</p>
+                    <h3>Value Four</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>Work-Life Integration</h3>
-                    <p>Research is important work, and so is your life outside the lab. We value sustainable practices, mental health, and the diverse roles and responsibilities our team members hold.</p>
+                    <h3>Value Five</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>Community Impact</h3>
-                    <p>We are motivated by research that ultimately benefits people. Whether through clinical applications, public communication, or direct service, we consider how our work can contribute positively to individuals and communities.</p>
+                    <h3>Value Six</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
@@ -1325,10 +1285,12 @@
         <div class="footer-content">
             <p>Social Interaction and Emotion Lab (SIEMO) | Rutgers University–Newark</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">Department of Psychology</p>
+            <p style="margin-top: 1rem; font-size: 1.05rem; font-weight: 500;">
+                <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu">nwk_psych_siemolab@psychology.rutgers.edu</a>
+            </p>
             <div class="footer-links">
-                <a href="mailto:razia.sahi@rutgers.edu">✉️</a>
-                <a href="https://linkedin.com">in</a>
-                <a href="https://bsky.app">☁️</a>
+                <a href="https://www.linkedin.com/company/siemo-lab/about/?viewAsMember=true" target="_blank">in</a>
+                <a href="https://bsky.app/profile/siemolab.bsky.social" target="_blank">☁️</a>
             </div>
         </div>
     </footer>
