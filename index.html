@@ -135,6 +135,40 @@
             align-items: start;
         }
 
+        .home-content-new {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .home-logo-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .home-text-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .lab-name {
+            font-size: 2.5rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .home-text-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
         .photo-section {
             text-align: center;
         }
@@ -864,16 +898,15 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="banner_white_bold.png" alt="SIEMO Lab" style="height: 60px; width: auto;">
+                <img src="logo_small_name_blue_bold.png" alt="SIEMO Lab" style="height: auto; width: auto; max-width: 200px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
-                <li><a href="#" data-page="members" class="nav-link">Members</a></li>
                 <li><a href="#" data-page="research" class="nav-link">Research</a></li>
+                <li><a href="#" data-page="members" class="nav-link">People</a></li>
                 <li><a href="#" data-page="publications" class="nav-link">Publications</a></li>
                 <li><a href="#" data-page="news" class="nav-link">News</a></li>
                 <li><a href="#" data-page="join" class="nav-link">Join Us</a></li>
-                <li><a href="#" data-page="values" class="nav-link">Values</a></li>
             </ul>
         </nav>
     </header>
@@ -881,25 +914,15 @@
     <main>
         <!-- HOME PAGE -->
         <div id="home" class="page active">
-            <div class="hero">
-                <h1>Social Interaction and Emotion Lab</h1>
-                <p>Understanding how social connections shape emotion and well-being</p>
-            </div>
-
-            <div class="home-content">
-                <div class="photo-section">
-                    <img src="group-photo-url.jpg" alt="SIEMO Lab Group Photo" class="group-photo">
+            <div class="home-content-new">
+                <div class="home-logo-section">
+                    <img src="logo_no_name_mono_blue_bold.png" alt="SIEMO Lab" style="width: 100%; max-width: 300px; height: auto;">
                 </div>
-
-                <div class="bio-section">
-                    <h2>Welcome to SIEMO</h2>
+                <div class="home-text-section">
+                    <h1 class="lab-name">Social Interaction and Emotion Lab</h1>
                     <p>As social creatures, our relationships with other people have tremendous downstream impacts on health and well-being. This is in part because social interactions dramatically shape how we think and feel, influencing how we process and experience emotions through life's challenges.</p>
 
                     <p>Our research systematically unpacks the effects of social support on emotion and well-being across various modalities and contexts, targeting a process called "social emotion regulation." Through this work, we aim to promote emotional intelligence in how we understand ourselves, each other, and our connections with one another.</p>
-
-                    <div class="recruiting-box">
-                        <p style="margin: 0;">Dr. Sahi will be recruiting a graduate student for Fall 2027. See <a href="#" data-page="research" onclick="showPage('research'); return false;" style="color: var(--white); font-weight: 700; text-decoration: underline;">Research</a> to learn more about her current research directions.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -907,7 +930,7 @@
         <!-- MEMBERS PAGE -->
         <div id="members" class="page">
             <div class="hero">
-                <h1>Lab Members</h1>
+                <h1>People</h1>
             </div>
 
             <!-- Lab Director -->
@@ -922,7 +945,7 @@
                         <h3>Razia Sahi, Ph.D.</h3>
                         <p class="pronunciation"><em>Pronounced: RAH-zee-uh SAH-hee</em></p>
                         <p class="pronouns"><em>She/Her</em></p>
-                        <p class="contact"><strong>Email:</strong> <a href="mailto:razia.sahi@rutgers.edu">razia.sahi@rutgers.edu</a></p>
+                        <p class="contact"><strong>Email:</strong> <a href="mailto:razia.sahi@rutgers.edu">razia.sahi@rutgers.edu</a> | <a href="https://raziasahi.com/cv.html" target="_blank"><strong>CV</strong></a></p>
                         
                         <div class="member-bio">
                             <p>Razia is an Assistant Professor in the Psychology Department at Rutgers University–Newark and the Director of the Social Interaction and Emotion Lab. Her lab works to understand how people influence each other's emotional states ("social emotion regulation") with a goal of underscoring the value of human connection and ways to leverage our interactions to improve psychological wellbeing. She completed her B.A. at New York University in Psychology and Philosophy, M.A. in Neurophilosophy at Georgia State University, Ph.D. in Psychology at University of California Los Angeles, and Postdoctoral Fellowship at Princeton University. She loves spending time outdoors, watching films, and cooking.</p>
@@ -952,9 +975,9 @@
                 </div>
             </div>
 
-            <!-- PhD Students -->
+            <!-- Doctoral Students -->
             <div class="member-section">
-                <h2 class="member-section-title">PhD Students</h2>
+                <h2 class="member-section-title">Doctoral Students</h2>
                 
                 <div class="member-profile">
                     <div class="member-profile-photo">
@@ -1063,7 +1086,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">In Press</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2026</h2>
 
             <div class="publication-item">
                 <h3>Hand-holding reduces the long-term painfulness of social memories</h3>
@@ -1279,60 +1302,31 @@
                 <h1>Join SIEMO</h1>
             </div>
 
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-dark);">We plan to grow the lab in the coming years. If you are interested in joining us, please review the below sections for more on opportunities for different career stages.</p>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: var(--text-dark);">As general guidance, we recommend using short introductory emails as opportunities to express who you are and what you hope to achieve through this specific collaboration.</p>
+
             <div class="position-card">
-                <h3>Undergraduate Research Assistants</h3>
-                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
+                <h3>Undergraduate Students</h3>
+                <p>We plan to take on undergraduate research assistants starting January 2027. If you would like to express your interest, please email us starting November 2026 with a little bit about yourself and why you are interested in working with us. We will typically only take students who can commit to more than one semester.</p>
             </div>
 
             <div class="position-card">
-                <h3>Postbaccalaureate Researchers</h3>
-                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
+                <h3>Doctoral Students</h3>
+                <p>The lab is recruiting a graduate student for Fall 2027. Feel free to reach out to Dr. Sahi to share a little bit about yourself and your interests ahead of the application deadline, but keep in mind that Dr. Sahi will not be meeting with or reviewing application materials from prospective Ph.D. students before the deadline. Useful guides for applying to PhD programs in Psychology can be found <a href="https://kateptrv.github.io/resources.html" target="_blank" style="color: #7EB1B4; text-decoration: underline;">here</a> and <a href="https://drive.google.com/file/d/1wHd_BRG3SHI-8sFS4E-0ilzp_IaKpQsd/view" target="_blank" style="color: #7EB1B4; text-decoration: underline;">here</a>.</p>
             </div>
 
             <div class="position-card">
-                <h3>Graduate Students</h3>
-                <p style="color: var(--text-light); font-style: italic;">Content coming soon...</p>
+                <h3>Postdocs</h3>
+                <p>The lab is not currently recruiting for funded positions, but we're happy to discuss applying for external fellowships and grants together (NSF, NIH, etc.). The ideal collaborator would have some background in social and affective science, but we welcome folks with a variety of skill sets and expertise.</p>
+            </div>
+
+            <div class="position-card">
+                <h3>Post-bac Positions</h3>
+                <p>We do not currently have any openings for post-bac positions.</p>
             </div>
         </div>
 
-        <!-- VALUES PAGE -->
-        <div id="values" class="page">
-            <div class="hero">
-                <h1>Lab Values</h1>
-            </div>
-
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3>Value One</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Value Two</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Value Three</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Value Four</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Value Five</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Value Six</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer>
