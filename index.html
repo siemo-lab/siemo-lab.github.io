@@ -522,93 +522,126 @@
 
         /* Publications Page */
         .publications-intro {
-            background-color: var(--light-gray);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-dark);
         }
 
         .publication-item {
-            border: 1px solid #e8e8e8;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 6px;
-            background-color: var(--white);
+            border: none;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 1.2rem 0;
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: transparent;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
         }
 
         .publication-item h3 {
             color: var(--navy);
-            margin-bottom: 0.8rem;
-            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
         }
 
         .publication-item .status {
             display: inline-block;
-            padding: 0.3rem 0.6rem;
+            padding: 0;
             background-color: transparent;
             color: var(--text-light);
-            font-size: 0.8rem;
+            font-size: 0.95rem;
             border-radius: 0;
-            margin: 0.5rem 0;
-            font-weight: 500;
+            margin: 0.3rem 0;
+            font-weight: 400;
+            font-style: italic;
             text-transform: capitalize;
         }
 
         .publication-item .authors {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin: 0.8rem 0;
-            font-weight: 500;
+            font-size: 0.9rem;
+            margin: 0.4rem 0;
+            font-weight: 400;
         }
 
         .publication-item .journal-info {
             color: var(--text-light);
             font-size: 0.9rem;
-            margin: 0.4rem 0;
-            font-weight: 500;
+            margin: 0.3rem 0;
+            font-weight: 400;
             font-style: italic;
         }
 
         .publication-item .links {
-            margin-top: 1rem;
+            margin-top: 0.6rem;
             display: flex;
-            gap: 0.8rem;
+            gap: 0.6rem;
             flex-wrap: wrap;
         }
 
         .publication-item a {
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.35rem 0.75rem;
             background-color: #7EB1B4;
             color: var(--white);
             text-decoration: none;
             margin-right: 0;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            border-radius: 3px;
             transition: all 0.2s;
+            border: 1px solid #7EB1B4;
         }
 
         .publication-item a:hover {
-            opacity: 0.85;
+            opacity: 0.9;
             text-decoration: none;
         }
 
+        /* Different colors for different link types */
         .publication-item a[href*="osf.io"],
-        .publication-item a:contains("Pre-print") {
-            background-color: #7EB1B4;
+        .publication-item a[href*="psyarxiv"],
+        .publication-item a[href*="researchsquare"] {
+            background-color: #B8A883;
+            border-color: #B8A883;
+            color: var(--white);
         }
 
-        .publication-item a[href*="researchsquare"],
-        .publication-item a:contains("Pre-print") {
+        .publication-item a[href*="pubmed"],
+        .publication-item a[href*="emotion"] {
             background-color: #7EB1B4;
+            border-color: #7EB1B4;
         }
 
-        .publication-item a[href*="psyarxiv"] {
-            background-color: #7EB1B4;
+        .publication-item a[href*="psychologytoday"],
+        .publication-item a[href*="psychology"],
+        .publication-item a[href*="blog"] {
+            background-color: #990038;
+            border-color: #990038;
+            color: var(--white);
+        }
+
+        .publication-item a[href*="nyt"],
+        .publication-item a[href*="vox"],
+        .publication-item a[href*="times"] {
+            background-color: #4A001F;
+            border-color: #4A001F;
+            color: var(--white);
+        }
+
+        .publication-item a[href*="github"],
+        .publication-item a[href*="code"],
+        .publication-item a[href*="data"] {
+            background-color: #1F3A4C;
+            border-color: #1F3A4C;
+            color: var(--white);
         }
 
         /* News Page */
@@ -1073,7 +1106,7 @@
                 <p>Below you'll find links to publications and pre-prints, including data and analytic code repositories and relevant blog posts or press articles that communicate this work for a broader audience.</p>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">Under Review</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">Under Review</h2>
 
             <div class="publication-item">
                 <h3>Sharing is believing: Saying or writing reframes of emotional experiences boosts cognitive emotion regulation</h3>
@@ -1121,7 +1154,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2026</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2026</h2>
 
             <div class="publication-item">
                 <h3>Hand-holding reduces the long-term painfulness of social memories</h3>
@@ -1133,7 +1166,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2025</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2025</h2>
 
             <div class="publication-item">
                 <h3>Vocal pitch as an acoustic marker of social support efficacy in women friendships</h3>
@@ -1159,7 +1192,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2024</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2024</h2>
 
             <div class="publication-item">
                 <h3>A data-driven typology of emotion regulation profiles</h3>
@@ -1173,7 +1206,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2023</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2023</h2>
 
             <div class="publication-item">
                 <h3>You changed my mind: Immediate and enduring impacts of social emotion regulation</h3>
@@ -1199,7 +1232,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2022</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2022</h2>
 
             <div class="publication-item">
                 <h3>One size does not fit all: Decomposing the implementation and differential benefits of social emotion regulation strategies</h3>
@@ -1215,7 +1248,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2021</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2021</h2>
 
             <div class="publication-item">
                 <h3>Having more virtual interaction partners during COVID-19 physical distancing measures may benefit mental health</h3>
@@ -1241,7 +1274,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2020</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2020</h2>
 
             <div class="publication-item">
                 <h3>With a little help from my friends: Selective social potentiation of emotion regulation</h3>
@@ -1279,7 +1312,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 2rem;">2019</h2>
+            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 1.2rem;">2019</h2>
 
             <div class="publication-item">
                 <h3>It's okay to be angry: A functionalist perspective of the dangers of over-regulating anger</h3>
