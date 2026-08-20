@@ -615,39 +615,40 @@
         }
 
         /* Different colors for different link types */
-        .publication-item a[href*="osf.io"],
-        .publication-item a[href*="psyarxiv"],
-        .publication-item a[href*="researchsquare"] {
+        
+        /* Teal (#7EB1B4) - Articles/Published */
+        .publication-item a[href*="pubmed"],
+        .publication-item a[href*="emotion.apa.org"],
+        .publication-item a[href*="sciencedirect"],
+        .publication-item a[href*="springer"],
+        .publication-item a[href*="sage"],
+        .publication-item a[href*="elsevier"] {
             background-color: #7EB1B4;
             border-color: #7EB1B4;
             color: var(--white);
         }
 
-        .publication-item a[href*="pubmed"],
-        .publication-item a[href*="emotion"] {
-            background-color: #7EB1B4;
-            border-color: #7EB1B4;
-        }
-
-        .publication-item a[href*="psychologytoday"],
-        .publication-item a[href*="psychology"],
-        .publication-item a[href*="blog"] {
+        /* Burgundy (#990038) - Pre-prints and Data/Code */
+        .publication-item a[href*="osf.io"],
+        .publication-item a[href*="psyarxiv"],
+        .publication-item a[href*="researchsquare"],
+        .publication-item a[href*="github"],
+        .publication-item a[href*="data"],
+        .publication-item a[href*="code"] {
             background-color: #990038;
             border-color: #990038;
             color: var(--white);
         }
 
+        /* Maroon (#4A001F) - Blog posts, Psychology Today, Media */
+        .publication-item a[href*="psychologytoday"],
+        .publication-item a[href*="blog"],
         .publication-item a[href*="nyt"],
         .publication-item a[href*="vox"],
-        .publication-item a[href*="times"] {
-            background-color: #4A001F;
-            border-color: #4A001F;
-            color: var(--white);
-        }
-
-        .publication-item a[href*="github"],
-        .publication-item a[href*="code"],
-        .publication-item a[href*="data"] {
+        .publication-item a[href*="times"],
+        .publication-item a[href*="greatergoodnews"],
+        .publication-item a[href*="psychiatryadvisor"],
+        .publication-item a[href*="psypost"] {
             background-color: #4A001F;
             border-color: #4A001F;
             color: var(--white);
@@ -1193,7 +1194,6 @@
 
             <div class="publication-item">
                 <h3>Vocal pitch as an acoustic marker of social support efficacy in women friendships</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Journal of Experimental Psychology: General</div>
                 <div class="authors">Razia S. Sahi | Siyan Nussbaum | João F. Guassi Moreira | Elizabeth M. Gaines | Daniel Lee | Naomi I. Eisenbeger | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1206,7 +1206,6 @@
 
             <div class="publication-item">
                 <h3>Leveraging large language models to estimate clinically relevant psychological constructs from psychotherapy transcripts</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Computational Psychiatry</div>
                 <div class="authors">Mostafa Abdou | Razia S. Sahi | Thomas D. Hull | Erik C. Nook | Nathaniel D. Daw</div>
                 <div class="links">
@@ -1219,7 +1218,6 @@
 
             <div class="publication-item">
                 <h3>A data-driven typology of emotion regulation profiles</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Emotion</div>
                 <div class="authors">João F. Guassi Moreira | Razia S. Sahi | Maria D. Calderon Leon | Natalie Saragosa-Harris | Yael H. Waizman | Anna E. Sedykin | Emilia Ninova | Tara S. Peris | James Gross | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1233,7 +1231,6 @@
 
             <div class="publication-item">
                 <h3>You changed my mind: Immediate and enduring impacts of social emotion regulation</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Emotion</div>
                 <div class="authors">Razia S. Sahi | Elizabeth M. Gaines | Siyan Nussbaum | Daniel Lee | Matthew D. Lieberman | Naomi I. Eisenbeger | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1247,7 +1244,6 @@
 
             <div class="publication-item">
                 <h3>Peer facilitation of emotion regulation in adolescence</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Developmental Cognitive Neuroscience</div>
                 <div class="authors">Razia S. Sahi | Naomi I. Eisenbeger | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1259,7 +1255,6 @@
 
             <div class="publication-item">
                 <h3>One size does not fit all: Decomposing the implementation and differential benefits of social emotion regulation strategies</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Emotion</div>
                 <div class="authors">Razia S. Sahi | Zhouzhou He | Jennifer A. Silvers | Naomi I. Eisenbeger</div>
                 <div class="links">
@@ -1275,7 +1270,6 @@
 
             <div class="publication-item">
                 <h3>Having more virtual interaction partners during COVID-19 physical distancing measures may benefit mental health</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Scientific Reports</div>
                 <div class="authors">Razia S. Sahi | Miriam Schwyck | Carolyn Parkinson | Naomi I. Eisenbeger</div>
                 <div class="links">
@@ -1286,7 +1280,6 @@
 
             <div class="publication-item">
                 <h3>The comfort in touch: Immediate and lasting effects of handholding on emotional experiences</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">PLOS ONE</div>
                 <div class="authors">Razia S. Sahi | Macrina C. Dieffenbach | Siyan Gan | Maya Lee | Laura I. Hazlett | Shannon M. Burns | Matthew D. Lieberman | Simone G. Shamay-Tsoory | Naomi I. Eisenberger</div>
                 <div class="links">
@@ -1301,7 +1294,6 @@
 
             <div class="publication-item">
                 <h3>With a little help from my friends: Selective social potentiation of emotion regulation</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Journal of Experimental Psychology: General</div>
                 <div class="authors">Razia S. Sahi | Emilia Ninova | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1316,7 +1308,6 @@
 
             <div class="publication-item">
                 <h3>Why don't you like me: The role of the mentalizing network in social rejection</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">The Neural Basis of Mentalizing - A Social-Cognitive and Affective Neuroscience Perspective (M. Gilead & K.N. Ochsner)</div>
                 <div class="authors">Razia S. Sahi | Naomi I. Eisenberger</div>
                 <div class="links">
@@ -1327,7 +1318,6 @@
 
             <div class="publication-item">
                 <h3>Performance and belief-based emotion regulation capacity and tendency: Mapping links with cognitive flexibility and perceived stress</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Emotion</div>
                 <div class="authors">João F. Guassi Moreira | Razia S. Sahi | Emilia Ninova | Carolyn Parkinson | Jennifer A. Silvers</div>
                 <div class="links">
@@ -1339,7 +1329,6 @@
 
             <div class="publication-item">
                 <h3>It's okay to be angry: A functionalist perspective of the dangers of over-regulating anger</h3>
-                <span class="status">Published</span>
                 <div class="journal-info">Philosophical Topics</div>
                 <div class="authors">Razia S. Sahi</div>
                 <div class="links">
