@@ -55,17 +55,13 @@
         }
 
         .logo {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
         .logo img {
-            height: 50px;
-            width: auto;
+            height: auto;
         }
 
         .nav-links {
@@ -710,6 +706,29 @@
             margin: 0 auto;
         }
 
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+        .footer-text {
+            flex: 1;
+        }
+
+        .footer-banner {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .footer-banner img {
+            max-height: 100px;
+            width: auto;
+        }
+
         .footer-content p {
             font-size: 1.1rem;
             font-weight: 500;
@@ -789,6 +808,15 @@
             .values-grid {
                 grid-template-columns: 1fr;
             }
+
+            .footer-main {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-banner {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 600px) {
@@ -832,8 +860,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="logo_small_nolab_blue.png" alt="SIEMO Lab Logo">
-                <span>SIEMO Lab</span>
+                <img src="banner_white_bold.png" alt="SIEMO Lab" style="height: 60px; width: auto;">
             </div>
             <ul class="nav-links">
                 <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
@@ -1321,21 +1348,28 @@
 
     <footer>
         <div class="footer-content">
-            <p>Social Interaction and Emotion Lab (SIEMO) | Rutgers University–Newark</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Department of Psychology</p>
-            <p style="margin-top: 1rem; font-size: 1.05rem; font-weight: 500;">
-                <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu">nwk_psych_siemolab@psychology.rutgers.edu</a>
-            </p>
-            <div class="footer-links">
-                <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu" title="Email" class="email">
-                    <img src="Envelope--Streamline-Ultimate.png" alt="Email" style="width: 28px; height: 28px;">
-                </a>
-                <a href="https://www.linkedin.com/company/siemo-lab/about/?viewAsMember=true" target="_blank" title="LinkedIn" class="linkedin">
-                    <img src="LinkedIn--Streamline-Simple-Icons.png" alt="LinkedIn" style="width: 28px; height: 28px;">
-                </a>
-                <a href="https://bsky.app/profile/siemolab.bsky.social" target="_blank" title="Bluesky" class="bluesky">
-                    <img src="Bluesky--Streamline-Simple-Icons.png" alt="Bluesky" style="width: 28px; height: 28px;">
-                </a>
+            <div class="footer-main">
+                <div class="footer-text">
+                    <p>Social Interaction and Emotion Lab (SIEMO) | Rutgers University–Newark</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Department of Psychology</p>
+                    <p style="margin-top: 1rem; font-size: 1.05rem; font-weight: 500;">
+                        <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu">nwk_psych_siemolab@psychology.rutgers.edu</a>
+                    </p>
+                    <div class="footer-links">
+                        <a href="mailto:nwk_psych_siemolab@psychology.rutgers.edu" title="Email" class="email">
+                            <img src="Envelope--Streamline-Ultimate.png" alt="Email" style="width: 28px; height: 28px;">
+                        </a>
+                        <a href="https://www.linkedin.com/company/siemo-lab/about/?viewAsMember=true" target="_blank" title="LinkedIn" class="linkedin">
+                            <img src="LinkedIn--Streamline-Simple-Icons.png" alt="LinkedIn" style="width: 28px; height: 28px;">
+                        </a>
+                        <a href="https://bsky.app/profile/siemolab.bsky.social" target="_blank" title="Bluesky" class="bluesky">
+                            <img src="Bluesky--Streamline-Simple-Icons.png" alt="Bluesky" style="width: 28px; height: 28px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-banner">
+                    <img src="banner_white_bold.png" alt="SIEMO Lab" style="height: 80px; width: auto;">
+                </div>
             </div>
         </div>
     </footer>
