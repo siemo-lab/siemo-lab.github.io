@@ -88,6 +88,36 @@
             border-bottom-color: #7EB1B4;
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            gap: 5px;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
         /* Main Container */
         main {
             max-width: 1300px;
@@ -974,6 +1004,57 @@
                 padding: 1.5rem 1rem;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                gap: 0;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--navy);
+                flex-direction: column;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-links.active {
+                max-height: 300px;
+                padding: 1.5rem 0;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                border-bottom: none;
+            }
+
+            .nav-links a:hover {
+                background-color: rgba(126, 177, 180, 0.2);
+            }
+
+            .nav-links a.active {
+                background-color: rgba(126, 177, 180, 0.3);
+                border-bottom: none;
+            }
+
             main {
                 padding: 0 1.2rem;
             }
@@ -1002,13 +1083,18 @@
             <div class="logo">
                 <img src="logo_small_name_blue_bold.png" alt="SIEMO Lab" style="height: auto; width: auto; max-width: 200px;">
             </div>
-            <ul class="nav-links">
-                <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
-                <li><a href="#" data-page="research" class="nav-link">Research</a></li>
-                <li><a href="#" data-page="members" class="nav-link">People</a></li>
-                <li><a href="#" data-page="publications" class="nav-link">Publications</a></li>
-                <li><a href="#" data-page="news" class="nav-link">News</a></li>
-                <li><a href="#" data-page="join" class="nav-link">Join Us</a></li>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" data-page="home" class="nav-link active">home</a></li>
+                <li><a href="#" data-page="research" class="nav-link">research</a></li>
+                <li><a href="#" data-page="members" class="nav-link">people</a></li>
+                <li><a href="#" data-page="publications" class="nav-link">publications</a></li>
+                <li><a href="#" data-page="news" class="nav-link">news</a></li>
+                <li><a href="#" data-page="join" class="nav-link">join us</a></li>
             </ul>
         </nav>
     </header>
@@ -1142,7 +1228,7 @@
                 <p>Below you'll find links to publications and pre-prints, including data and analytic code repositories and relevant blog posts or press articles that communicate this work for a broader audience.</p>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">Under Review</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">Under Review</h2>
 
             <div class="publication-item">
                 <h3>Sharing is believing: Saying or writing reframes of emotional experiences boosts cognitive emotion regulation</h3>
@@ -1190,7 +1276,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2026</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2026</h2>
 
             <div class="publication-item">
                 <h3>Hand-holding reduces the long-term painfulness of social memories</h3>
@@ -1202,7 +1288,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2025</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2025</h2>
 
             <div class="publication-item">
                 <h3>Vocal pitch as an acoustic marker of social support efficacy in women friendships</h3>
@@ -1226,7 +1312,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2024</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2024</h2>
 
             <div class="publication-item">
                 <h3>A data-driven typology of emotion regulation profiles</h3>
@@ -1239,7 +1325,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2023</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2023</h2>
 
             <div class="publication-item">
                 <h3>You changed my mind: Immediate and enduring impacts of social emotion regulation</h3>
@@ -1263,7 +1349,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2022</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2022</h2>
 
             <div class="publication-item">
                 <h3>One size does not fit all: Decomposing the implementation and differential benefits of social emotion regulation strategies</h3>
@@ -1278,7 +1364,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2021</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2021</h2>
 
             <div class="publication-item">
                 <h3>Having more virtual interaction partners during COVID-19 physical distancing measures may benefit mental health</h3>
@@ -1302,7 +1388,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2020</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2020</h2>
 
             <div class="publication-item">
                 <h3>With a little help from my friends: Selective social potentiation of emotion regulation</h3>
@@ -1337,7 +1423,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--navy); font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem;">2019</h2>
+            <h2 style="color: var(--navy); font-size: 1.8rem; font-weight: 900; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 3px solid #7EB1B4;">2019</h2>
 
             <div class="publication-item">
                 <h3>It's okay to be angry: A functionalist perspective of the dangers of over-regulating anger</h3>
@@ -1475,9 +1561,37 @@
                 e.preventDefault();
                 const pageId = this.getAttribute('data-page');
                 showPage(pageId);
+                
+                // Close hamburger menu on mobile
+                const hamburger = document.getElementById('hamburger-btn');
+                const navLinks = document.getElementById('nav-links');
+                if (hamburger && navLinks) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+                
                 return false;
             });
         });
+
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        if (hamburgerBtn && navLinks) {
+            hamburgerBtn.addEventListener('click', function() {
+                hamburgerBtn.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('header')) {
+                    hamburgerBtn.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
