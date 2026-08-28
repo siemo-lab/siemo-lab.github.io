@@ -998,28 +998,6 @@
 
         @media (max-width: 600px) {
             .nav-links {
-                flex-wrap: wrap;
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .logo {
-                font-size: 1.6rem;
-            }
-
-            header {
-                padding: 1.5rem 1rem;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            nav {
-                gap: 0;
-            }
-
-            .nav-links {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -1031,6 +1009,7 @@
                 overflow: hidden;
                 transition: max-height 0.3s ease;
                 padding: 0;
+                display: flex;
             }
 
             .nav-links.active {
@@ -1040,6 +1019,7 @@
 
             .nav-links li {
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                width: 100%;
             }
 
             .nav-links li:last-child {
@@ -1060,6 +1040,22 @@
             .nav-links a.active {
                 background-color: rgba(126, 177, 180, 0.3);
                 border-bottom: none;
+            }
+
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            header {
+                padding: 1.5rem 1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                gap: 0;
             }
 
             main {
