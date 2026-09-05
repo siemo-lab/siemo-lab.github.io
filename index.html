@@ -1129,11 +1129,11 @@
         <style>
             @media (max-width: 768px) {
                 #research .page { min-height: auto !important; }
-                #research .hero { margin-bottom: 0 !important; }
-                #research .research-intro { margin: 0 !important; padding: 1rem !important; }
+                #research .hero { margin-bottom: 0 !important; padding: 0.5rem 0 !important; }
+                #research .research-intro { margin: 0 !important; padding: 0.5rem !important; }
                 #research .research-intro > div { gap: 0 !important; flex-direction: column !important; }
-                #research .research-questions { margin-top: -4rem !important; gap: 0.5rem !important; }
-                #research .question-box { margin-top: 0 !important; margin-bottom: 0 !important; }
+                #research .research-questions { transform: translateY(-80px) !important; gap: 0.5rem !important; }
+                #research .question-box { padding: 0.8rem !important; }
             }
         </style>
 </head>
@@ -1252,6 +1252,7 @@
         <div id="research" class="page">
             <div class="hero">
                 <h1>Research Directions</h1>
+                <div style="font-size: 0.7rem; color: #999; display: none;">TEST-V2-CSS-UPDATE</div>
             </div>
 
             <div class="research-intro">
@@ -1271,7 +1272,6 @@
                     </script>
                 </div>
             </div>
-
             <div class="research-questions">
                 <div class="question-box">
                     <strong>How do our interactions with others help <span style="color: #1F3A4C;">change our perspectives</span> of emotional experiences?</strong>
