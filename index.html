@@ -961,6 +961,11 @@
                 gap: 2rem;
             }
 
+            .hero {
+                margin-bottom: 0.5rem !important;
+                padding: 0.8rem 0 !important;
+            }
+
             .page {
                 padding: 1rem 0 !important;
             }
@@ -983,9 +988,9 @@
                 padding: 1rem !important;
             }
 
-            .research-intro > div {
-                flex-direction: column;
+            .research-intro > div[style] {
                 gap: 0.5rem !important;
+                flex-direction: column !important;
             }
 
             .research-intro div > div:last-child {
@@ -994,6 +999,7 @@
                 max-width: 100% !important;
                 margin: 0 !important;
                 padding: 0 !important;
+                min-width: 0 !important;
             }
 
             .research-intro div > div:last-child video {
