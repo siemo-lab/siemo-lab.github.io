@@ -961,12 +961,8 @@
                 gap: 2rem;
             }
 
-            .hero {
-                margin-bottom: 0.5rem !important;
-                padding: 0.8rem 0 !important;
-            }
-
             .page {
+                min-height: auto !important;
                 padding: 1rem 0 !important;
             }
 
@@ -1130,6 +1126,13 @@
             }
         }
     </style>
+        <style>
+            @media (max-width: 768px) {
+                #research .hero { margin-bottom: 0 !important; }
+                #research .research-intro { margin: 0 !important; gap: 0 !important; }
+                #research .research-questions { margin-top: -3rem !important; }
+            }
+        </style>
 </head>
 <body>
     <header>
