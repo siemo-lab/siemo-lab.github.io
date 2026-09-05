@@ -1128,9 +1128,12 @@
     </style>
         <style>
             @media (max-width: 768px) {
+                #research .page { min-height: auto !important; }
                 #research .hero { margin-bottom: 0 !important; }
-                #research .research-intro { margin: 0 !important; gap: 0 !important; }
-                #research .research-questions { margin-top: -3rem !important; }
+                #research .research-intro { margin: 0 !important; padding: 1rem !important; }
+                #research .research-intro > div { gap: 0 !important; flex-direction: column !important; }
+                #research .research-questions { margin-top: -4rem !important; gap: 0.5rem !important; }
+                #research .question-box { margin-top: 0 !important; margin-bottom: 0 !important; }
             }
         </style>
 </head>
