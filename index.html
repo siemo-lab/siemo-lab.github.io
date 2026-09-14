@@ -1359,7 +1359,7 @@
             </div>
 
             <div class="publication-item">
-                <h3>Second-order geometry helps clarify relationships between momentary emotion regulation use and affect</h3>
+                <h3>Second-Order Geometry Helps Clarify Relationships between Momentary Emotion Regulation Use and Affect</h3>
                 <div class="authors">Ben Scheve | Razia S. Sahi | Jennifer A. Silvers | João F. Guassi Moreira</div>
                 <div class="links">
                     <a href="https://osf.io/preprints/psyarxiv/cg3d2_v1" target="_blank">Pre-print</a>
@@ -1520,10 +1520,14 @@
             </div>
 
             <div class="news-feed">
-                <div class="news-item text-only">
+                <div class="news-item" onclick="toggleNews(this)" style="cursor: pointer;">
+                    <img src="IMG_2692.heic" alt="SIEMO Lab Team" class="news-image" style="max-height: 300px; object-fit: cover;">
                     <div class="news-content">
-                        <h3>Coming Soon</h3>
-                        <p>Stay tuned for updates from the lab. Follow along as we share announcements, research developments, and lab highlights.</p>
+                        <h3>The siemo lab is officially up-and-running!</h3>
+                        <div class="news-date">09/14/2026</div>
+                        <p class="news-preview" style="display: none;"></p>
+                        <p class="news-full" style="display: none; margin-top: 1rem;"><em style="color: #7EB1B4; font-style: italic;">We can't wait to share what we're working on!</em></p>
+                        <div class="news-readmore" style="color: #7EB1B4; font-weight: 600; margin-top: 0.8rem;">→</div>
                     </div>
                 </div>
 
@@ -1630,6 +1634,22 @@
             window.scrollTo(0, 0);
             
             return false;
+        }
+
+        function toggleNews(element) {
+            const preview = element.querySelector('.news-preview');
+            const full = element.querySelector('.news-full');
+            const readmore = element.querySelector('.news-readmore');
+            
+            if (full.style.display === 'none') {
+                preview.style.display = 'none';
+                full.style.display = 'block';
+                readmore.textContent = '↑';
+            } else {
+                preview.style.display = 'block';
+                full.style.display = 'none';
+                readmore.textContent = '→';
+            }
         }
 
         // Add click handlers to all nav links
