@@ -520,20 +520,29 @@
                 font-size: 1.3rem;
             }
 
-            /* Press Coverage on mobile */
-            #news > div > div:first-child {
+            /* Press Coverage on mobile - show one item at a time */
+            #pressCarousel {
+                gap: 32px !important;
+            }
+
+            #pressCarousel a {
+                flex: 0 0 calc(100% - 0.5rem) !important;
+                min-width: 100% !important;
+            }
+
+            #news > div > div:nth-child(2) {
                 flex-direction: column;
                 gap: 1rem;
             }
 
-            #news > div > div:first-child h2 {
+            #news > div > div:nth-child(2) h2 {
                 font-size: 1.5rem !important;
                 margin: 0 !important;
                 padding-bottom: 0.5rem !important;
                 border-bottom: 3px solid #7EB1B4 !important;
             }
 
-            #news > div > div:first-child button {
+            #news > div > div:nth-child(2) button {
                 font-size: 1.5rem !important;
                 padding: 5px 10px !important;
             }
@@ -1581,7 +1590,7 @@
             </div>
                 <!-- Carousel Container -->
                 <div style="overflow: hidden; border-radius: 8px;">
-                    <div id="pressCarousel" style="display: flex; gap: 2rem; transition: transform 0.5s ease-in-out; width: 100%;">
+                    <div id="pressCarousel" style="display: flex; gap: 2rem; transition: transform 0.5s ease-in-out; width: 100%; flex-wrap: nowrap;">
                         <!-- NYT Card -->
                         <a href="https://www.nytimes.com/2023/03/07/learning/how-do-you-like-to-be-comforted-when-you-are-sad.html" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1.33rem); min-width: 280px;">
                             <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
@@ -1764,7 +1773,9 @@
             const cardElement = carousel.querySelector('a');
             const scrollAmount = cardElement.offsetWidth + 32; // card width + gap
             const totalCards = carousel.querySelectorAll('a').length;
-            const visibleCards = 3;
+            
+            // Determine visible cards based on screen size
+            const visibleCards = window.innerWidth <= 768 ? 1 : 3;
             const maxPosition = totalCards - visibleCards;
             
             if (direction === 'left') {
