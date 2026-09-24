@@ -1770,20 +1770,17 @@
 
         function scrollPressCarousel(direction) {
             const carousel = document.getElementById('pressCarousel');
-            const scrollAmount = carousel.querySelector('a').offsetWidth + 32; // card width + gap
+            const container = carousel.parentElement;
+            const containerWidth = container.offsetWidth;
+            const scrollAmount = (containerWidth / 3) + 32; // one card width + gap
             const totalCards = carousel.querySelectorAll('a').length;
             const visibleCards = 3;
             const maxPosition = totalCards - visibleCards;
             
             if (direction === 'left') {
-                pressCarouselPosition = (pressCarouselPosition - 1 + totalCards) % totalCards;
+                pressCarouselPosition = Math.max(0, pressCarouselPosition - 1);
             } else {
-                pressCarouselPosition = (pressCarouselPosition + 1) % totalCards;
-            }
-            
-            // Ensure position doesn't go beyond max
-            if (pressCarouselPosition > maxPosition) {
-                pressCarouselPosition = 0;
+                pressCarouselPosition = Math.min(maxPosition, pressCarouselPosition + 1);
             }
             
             carousel.style.transform = `translateX(${-pressCarouselPosition * scrollAmount}px)`;
