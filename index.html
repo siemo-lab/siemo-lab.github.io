@@ -1769,9 +1769,9 @@
             const maxPosition = totalCards - visibleCards;
             
             if (direction === 'left') {
-                pressCarouselPosition = Math.max(0, pressCarouselPosition - 1);
+                pressCarouselPosition = (pressCarouselPosition - 1 + maxPosition + 1) % (maxPosition + 1);
             } else {
-                pressCarouselPosition = Math.min(maxPosition, pressCarouselPosition + 1);
+                pressCarouselPosition = (pressCarouselPosition + 1) % (maxPosition + 1);
             }
             
             // Measure actual scroll distance from first card to second card
