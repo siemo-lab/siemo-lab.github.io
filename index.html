@@ -534,19 +534,12 @@
                 display: none !important;
             }
 
-            #pressControlsContainer {
-                margin-left: calc(-50vw + 50%);
-                margin-right: calc(-50vw + 50%);
-                padding: 0 1rem;
-                margin-bottom: 1.5rem;
-            }
-
             #pressCarousel {
-                gap: 1.5rem !important;
+                gap: 2rem !important;
             }
 
             #pressCarousel a {
-                flex: 0 0 calc(100% - 0.5rem) !important;
+                flex: 0 0 calc(100% - 1rem) !important;
                 min-width: 100% !important;
             }
         }
@@ -1593,15 +1586,12 @@
                 <button onclick="scrollPressCarousel('right')" style="background: none; border: none; font-size: 1.5rem; color: #7EB1B4; cursor: pointer; padding: 5px 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
             </div>
 
-            <div id="pressControlsContainer" style="position: relative; display: flex; align-items: center; margin-bottom: 3rem; margin-left: -2rem; margin-right: -2rem; padding: 0 60px; min-height: 280px;">
-                <!-- Left Arrow at Screen Edge -->
-                <button id="pressLeftArrowDesktop" onclick="scrollPressCarousel('left')" style="position: absolute; left: 10px; background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❮</button>
-
+            <div style="position: relative; margin-bottom: 3rem;">
                 <!-- Carousel Container -->
-                <div style="overflow: hidden; flex: 1;">
-                    <div id="pressCarousel" style="display: flex; gap: 1.5rem; transition: transform 0.5s ease-in-out; width: 100%; flex-wrap: nowrap;">
+                <div style="overflow: hidden; border-radius: 8px;">
+                    <div id="pressCarousel" style="display: flex; gap: 2rem; transition: transform 0.5s ease-in-out; width: 100%;">
                         <!-- NYT Card -->
-                        <a href="https://www.nytimes.com/2023/03/07/learning/how-do-you-like-to-be-comforted-when-you-are-sad.html" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
+                        <a href="https://www.nytimes.com/2023/03/07/learning/how-do-you-like-to-be-comforted-when-you-are-sad.html" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1.33rem); min-width: 280px;">
                             <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                 <img src="23WELL-EMOTIONAL-SUPPORT-superJumbo.webp" alt="The New York Times" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
                                 <div style="padding: 1.5rem;">
@@ -1612,7 +1602,7 @@
                         </a>
 
                         <!-- National Geographic Card -->
-                        <a href="https://www.nationalgeographic.com/science/article/asking-for-help-favors-loneliness-epidemic" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
+                        <a href="https://www.nationalgeographic.com/science/article/asking-for-help-favors-loneliness-epidemic" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1.33rem); min-width: 280px;">
                             <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                 <img src="https://i.natgeofe.com/n/e6719c14-393a-44ec-95b8-beefd4f31173/NationalGeographic_2801708_16x9.jpg?w=1200" alt="National Geographic" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
                                 <div style="padding: 1.5rem;">
@@ -1623,7 +1613,7 @@
                         </a>
 
                         <!-- Vox Card -->
-                        <a href="https://www.vox.com/even-better/23589570/offer-help-support-validation" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
+                        <a href="https://www.vox.com/even-better/23589570/offer-help-support-validation" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1.33rem); min-width: 280px;">
                             <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                 <img src="GettyImages_1168894271.webp" alt="Vox" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
                                 <div style="padding: 1.5rem;">
@@ -1634,7 +1624,7 @@
                         </a>
 
                         <!-- Podcast Card -->
-                        <a href="https://podcasts.apple.com/us/podcast/s4-ep14-your-mind-on-social-emotion-regulation-with-dr/id1624593173?i=1000715035976" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
+                        <a href="https://podcasts.apple.com/us/podcast/s4-ep14-your-mind-on-social-emotion-regulation-with-dr/id1624593173?i=1000715035976" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1.33rem); min-width: 280px;">
                             <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                 <img src="GupBMYtWEAASyXF.jpg" alt="Minds Matter Podcast" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
                                 <div style="padding: 1.5rem;">
@@ -1643,34 +1633,12 @@
                                 </div>
                             </div>
                         </a>
-
-                        <!-- PsyPost Card -->
-                        <a href="https://www.psypost.org/holding-a-partners-hand-while-processing-painful-memories-can-weaken-the-lasting-effects-of-emotional-pain/" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
-                            <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                <img src="couple-holding-hands-750x375.webp" alt="PsyPost" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
-                                <div style="padding: 1.5rem;">
-                                    <h3 style="font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; font-weight: 700;">PsyPost</h3>
-                                    <p style="font-size: 0.9rem; color: #666; margin: 0;">Holding a partner's hand while processing painful memories</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- HBR Card -->
-                        <a href="https://hbr.org/2024/07/when-your-employee-feels-angry-sad-or-dejected" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
-                            <div style="background-color: #f5f5f5; border-radius: 8px; overflow: hidden; border-left: 5px solid #7EB1B4; transition: transform 0.2s, box-shadow 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                <img src="R2404D_KAFKA.avif" alt="Harvard Business Review" style="width: 100%; height: 180px; object-fit: cover; background-color: #ddd;">
-                                <div style="padding: 1.5rem;">
-                                    <h3 style="font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; font-weight: 700;">Harvard Business Review</h3>
-                                    <p style="font-size: 0.9rem; color: #666; margin: 0;">When your employee feels angry, sad, or dejected</p>
-                                </div>
-                            </div>
                     </div>
                 </div>
-                </div>
 
-                <!-- Right Arrow at Screen Edge -->
-                <button id="pressRightArrowDesktop" onclick="scrollPressCarousel('right')" style="position: absolute; right: 10px; background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
-            </div>
+                <!-- Navigation Arrows -->
+                <button onclick="scrollPressCarousel('left')" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❮</button>
+                <button onclick="scrollPressCarousel('right')" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
         </div>
 
         <!-- JOIN US PAGE -->
@@ -1781,12 +1749,9 @@
 
         function scrollPressCarousel(direction) {
             const carousel = document.getElementById('pressCarousel');
-            const cardElement = carousel.querySelector('a');
-            const scrollAmount = cardElement.offsetWidth + 24; // card width + 1.5rem gap
+            const scrollAmount = carousel.querySelector('a').offsetWidth + 32; // card width + gap
             const totalCards = carousel.querySelectorAll('a').length;
-            
-            // Determine visible cards based on screen size
-            const visibleCards = window.innerWidth <= 768 ? 1 : 3;
+            const visibleCards = 3;
             const maxPosition = totalCards - visibleCards;
             
             if (direction === 'left') {
