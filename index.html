@@ -1761,20 +1761,19 @@
 
         function scrollPressCarousel(direction) {
             const carousel = document.getElementById('pressCarousel');
-            const container = carousel.parentElement;
+            const container = carousel.parentElement.querySelector('[style*="overflow"]') || carousel.parentElement;
             const firstCard = carousel.querySelector('a');
             
             // Detect visible cards based on screen width
             const isMobile = window.innerWidth <= 768;
             const visibleCards = isMobile ? 1 : 3;
             
-            // Calculate scroll distance
-            const cardWidth = firstCard.offsetWidth;
-            const gap = 32; // 2rem in pixels
-            const scrollAmount = cardWidth + gap;
-            
             const totalCards = carousel.querySelectorAll('a').length;
-            const maxPosition = Math.max(0, totalCards - visibleCards);
+            const maxPosition = totalCards - visibleCards;
+            
+            // Calculate scroll distance based on container width / visible cards
+            const containerWidth = container.offsetWidth;
+            const scrollAmount = containerWidth / visibleCards;
             
             if (direction === 'left') {
                 pressCarouselPosition = Math.max(0, pressCarouselPosition - 1);
