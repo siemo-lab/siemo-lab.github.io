@@ -1593,12 +1593,12 @@
                 <button onclick="scrollPressCarousel('right')" style="background: none; border: none; font-size: 1.5rem; color: #7EB1B4; cursor: pointer; padding: 5px 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
             </div>
 
-            <div id="pressControlsContainer" style="position: relative; margin-bottom: 3rem; margin-left: -2rem; margin-right: -2rem; padding: 0 80px;">
+            <div id="pressControlsContainer" style="position: relative; display: flex; align-items: center; margin-bottom: 3rem; margin-left: -2rem; margin-right: -2rem; padding: 0 60px; min-height: 280px;">
                 <!-- Left Arrow at Screen Edge -->
-                <button id="pressLeftArrowDesktop" onclick="scrollPressCarousel('left')" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❮</button>
+                <button id="pressLeftArrowDesktop" onclick="scrollPressCarousel('left')" style="position: absolute; left: 10px; background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❮</button>
 
                 <!-- Carousel Container -->
-                <div style="overflow: hidden;">
+                <div style="overflow: hidden; flex: 1;">
                     <div id="pressCarousel" style="display: flex; gap: 1.5rem; transition: transform 0.5s ease-in-out; width: 100%; flex-wrap: nowrap;">
                         <!-- NYT Card -->
                         <a href="https://www.nytimes.com/2023/03/07/learning/how-do-you-like-to-be-comforted-when-you-are-sad.html" target="_blank" style="text-decoration: none; color: inherit; flex: 0 0 calc(33.333% - 1rem); min-width: 280px;">
@@ -1669,7 +1669,7 @@
                 </div>
 
                 <!-- Right Arrow at Screen Edge -->
-                <button id="pressRightArrowDesktop" onclick="scrollPressCarousel('right')" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
+                <button id="pressRightArrowDesktop" onclick="scrollPressCarousel('right')" style="position: absolute; right: 10px; background: none; border: none; font-size: 2rem; color: #7EB1B4; cursor: pointer; padding: 10px; transition: color 0.2s;" onmouseover="this.style.color='#1F3A4C'" onmouseout="this.style.color='#7EB1B4'">❯</button>
             </div>
         </div>
 
